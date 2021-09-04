@@ -1,12 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PEA Learning Platform</title>
+
+    <!-- Make sure to always link main.css to all html pages in this project -->
+    <link rel="stylesheet" href="/stylesheets/main.css" />
+  </head>
+  <body>
+    <nav id="sidebar-nav" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <h2>Table of Contents</h2>
+      <ul>
+        <li>
+          <a href="#">Introduction to Computer Science and Programming</a>
+        </li>
+        <li>
+          <a href="#"
+            >Introduction to Software development / Collaboration tools</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <div id="root">
+      <header>
+        <div class="container row">
+          <button class="open-btn" onclick="openNav()">
+            <img
+              src="/assets/bars-solid.svg"
+              alt="Hamburger"
+              class="hamburger-icon"
+            />
+          </button>
+          <h2>PEA Learning Curriculum</h2>
+        </div>
+      </header>
+
+      <main class="main-section">
+        <h2>Introduction to Computer Science and Programming</h2>
+        <p>
+          This module covers: the basics of Computer Science; Information which
+          can be applied to any and all programming languages.
+        </p>
+        <div class="col d-flex justify-content-center">
+          <iframe
+            class="video"
+            src="https://www.youtube.com/embed/zOjov-2OZ0E"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </main>
+
+      <!-- <footer>This is the footer section</footer> -->
+    </div>
+
+    <script>
+      function openNav() {
+        document.getElementById("sidebar-nav").style.width = "250px";
+        document.getElementById("root").style.marginLeft = "250px";
+      }
+
+      function closeNav() {
+        document.getElementById("sidebar-nav").style.width = "0";
+        document.getElementById("root").style.marginLeft = "0";
+      }
+    </script>
+  </body>
 </html>
